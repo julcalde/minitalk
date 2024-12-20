@@ -1,16 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   server.c                                           :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julcalde <julcalde@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/20 16:14:57 by julcalde          #+#    #+#             */
-/*   Updated: 2024/12/20 19:52:54 by julcalde         ###   ########.fr       */
+/*   Created: 2024/10/10 19:58:07 by julcalde          #+#    #+#             */
+/*   Updated: 2024/12/15 18:48:48 by julcalde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int main()
+#include "../libft.h"
+
+void	*ft_memset(void *b, int c, size_t len)
 {
-	return (0);
+	unsigned char	*p;
+	size_t			i;
+
+	p = b;
+	i = 0;
+	while (i < len)
+	{
+		p[i] = (unsigned char)c;
+		i++;
+	}
+	return (p);
 }

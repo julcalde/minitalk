@@ -1,16 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   server.c                                           :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julcalde <julcalde@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/20 16:14:57 by julcalde          #+#    #+#             */
-/*   Updated: 2024/12/20 19:52:54 by julcalde         ###   ########.fr       */
+/*   Created: 2024/10/11 13:01:24 by julcalde          #+#    #+#             */
+/*   Updated: 2024/12/15 18:48:45 by julcalde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int main()
+#include "../libft.h"
+
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	return (0);
+	unsigned char		*d;
+	const unsigned char	*s;
+
+	if (dst == NULL && src == NULL)
+		return (NULL);
+	d = dst;
+	s = src;
+	if (d < s)
+	{
+		while (len--)
+			*d++ = *s++;
+	}
+	else
+	{
+		d += len;
+		s += len;
+		while (len--)
+			*(--d) = *(--s);
+	}
+	return ((void *) dst);
 }

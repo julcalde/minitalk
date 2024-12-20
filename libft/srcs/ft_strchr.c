@@ -1,16 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   server.c                                           :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julcalde <julcalde@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/20 16:14:57 by julcalde          #+#    #+#             */
-/*   Updated: 2024/12/20 19:52:54 by julcalde         ###   ########.fr       */
+/*   Created: 2024/10/08 21:32:59 by julcalde          #+#    #+#             */
+/*   Updated: 2024/12/15 18:49:07 by julcalde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int main()
+#include "../libft.h"
+
+char	*ft_strchr(const char *s, int c)
 {
-	return (0);
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] == (char)c)
+			return ((char *) &s[i]);
+		i++;
+	}
+	if ((char)c == '\0')
+		return ((char *) &s[i]);
+	return (NULL);
 }

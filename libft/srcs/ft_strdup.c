@@ -1,16 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   server.c                                           :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julcalde <julcalde@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/20 16:14:57 by julcalde          #+#    #+#             */
-/*   Updated: 2024/12/20 19:52:54 by julcalde         ###   ########.fr       */
+/*   Created: 2024/10/11 17:18:20 by julcalde          #+#    #+#             */
+/*   Updated: 2024/12/15 18:49:10 by julcalde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int main()
+#include "../libft.h"
+
+char	*ft_strdup(const char *s1)
 {
-	return (0);
+	char	*dupe;
+	int		c;
+	size_t	i;
+
+	c = 0;
+	i = ft_strlen(s1);
+	dupe = ft_calloc(i + 1, sizeof(char));
+	if (dupe == NULL)
+		return (NULL);
+	while (s1[c] != '\0')
+	{
+		dupe[c] = s1[c];
+		c++;
+	}
+	dupe[c] = '\0';
+	return (dupe);
 }

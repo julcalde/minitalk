@@ -1,16 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   server.c                                           :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julcalde <julcalde@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/20 16:14:57 by julcalde          #+#    #+#             */
-/*   Updated: 2024/12/20 19:52:54 by julcalde         ###   ########.fr       */
+/*   Created: 2024/10/11 16:27:05 by julcalde          #+#    #+#             */
+/*   Updated: 2024/12/15 18:48:19 by julcalde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int main()
+#include "../libft.h"
+
+void	*ft_calloc(size_t count, size_t size)
 {
-	return (0);
+	size_t	tot_mem;
+	void	*p;
+
+	tot_mem = count * size;
+	p = malloc(count * size);
+	if (p == NULL)
+		return (NULL);
+	ft_memset(p, 0, tot_mem);
+	return (p);
 }
