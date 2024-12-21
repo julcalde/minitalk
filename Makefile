@@ -5,14 +5,14 @@ CLIENT = client
 SRCS_SERVER = server.c
 SRCS_CLIENT = client.c
 
-LIBFT = ./libft
-PRINTF = ./libft/includes/printf
+LIBFT = libft
+PRINTF = libft/include/printf
 
 OBJS_SERVER = $(SRCS_SERVER:.c=.o)
 OBJS_CLIENT = $(SRCS_CLIENT:.c=.o)
 
 CFLAGS = -Wall -Werror -Wextra -I$(LIBFT) -I$(PRINTF)
-LFLAGS = -L$(LIBFT) -lft -L$(PRINTF) -lft_printf
+LFLAGS = -L$(LIBFT) -lft -L$(PRINTF) -lft
 
 # Rules
 all: $(SERVER) $(CLIENT)

@@ -6,7 +6,7 @@
 /*   By: julcalde <julcalde@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 16:14:57 by julcalde          #+#    #+#             */
-/*   Updated: 2024/12/21 13:39:39 by julcalde         ###   ########.fr       */
+/*   Updated: 2024/12/21 14:17:02 by julcalde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ void	bits_to_char(int bit)
 	i++;
 	if (i == 8)
 	{
-		write (1, &c, 1);
+		ft_printf("%c", c);
 		if (c == '\0')
-			write (1, '\n', 1);
+			ft_printf("\n");
 		c = 0;
 		i = 0;
 	}
@@ -38,7 +38,7 @@ void	bits_to_char(int bit)
 
 int	main(void)
 {
-	ft_printf("Login to Server %d was successful.\n", getpid());
+	ft_printf("Login to Server PID %d was successful.\n", getpid());
 	while (1)
 	{
 		signal(SIGUSR2, bits_to_char);

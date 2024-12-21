@@ -6,7 +6,7 @@
 /*   By: julcalde <julcalde@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 16:14:55 by julcalde          #+#    #+#             */
-/*   Updated: 2024/12/21 13:33:06 by julcalde         ###   ########.fr       */
+/*   Updated: 2024/12/21 14:21:06 by julcalde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 void	send_bit(int pid, char *str)
 {
 	size_t	byte_arr_i;
-	int		i;
+	size_t	i;
 
 	i = 0;
 	while (i < ft_strlen(str))
