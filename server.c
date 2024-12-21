@@ -6,7 +6,7 @@
 /*   By: julcalde <julcalde@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 16:14:57 by julcalde          #+#    #+#             */
-/*   Updated: 2024/12/21 14:17:02 by julcalde         ###   ########.fr       */
+/*   Updated: 2024/12/21 15:59:40 by julcalde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,9 @@
 
 void	bits_to_char(int bit)
 {
-	static unsigned char	c;
-	static int				i;
+	static unsigned char	c = 0;
+	static int				i = 0;
 
-	c = 0;
-	i = 0;
 	if (bit == SIGUSR1)
 		c |= (0 << i);
 	else if (bit == SIGUSR2)

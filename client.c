@@ -6,7 +6,7 @@
 /*   By: julcalde <julcalde@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 16:14:55 by julcalde          #+#    #+#             */
-/*   Updated: 2024/12/21 14:21:06 by julcalde         ###   ########.fr       */
+/*   Updated: 2024/12/21 15:59:14 by julcalde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	main(int argc, char **argv)
 	}
 	else
 	{
-		ft_printf("Please enter only one word");
+		ft_printf("Please enter only one word\n");
 	}
 	return (0);
 }
